@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1DF615DD2C898A670009CE57 /* NYTimesNewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF615DC2C898A670009CE57 /* NYTimesNewsApp.swift */; };
-		1DF615DF2C898A670009CE57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF615DE2C898A670009CE57 /* ContentView.swift */; };
+		1DF615DF2C898A670009CE57 /* ArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF615DE2C898A670009CE57 /* ArticlesView.swift */; };
 		1DF615E12C898A690009CE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF615E02C898A690009CE57 /* Assets.xcassets */; };
 		1DF615E42C898A690009CE57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF615E32C898A690009CE57 /* Preview Assets.xcassets */; };
+		1DF615EB2C898BD10009CE57 /* AtriclesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF615EA2C898BD10009CE57 /* AtriclesViewModel.swift */; };
+		1DF615ED2C898BE80009CE57 /* ArticleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF615EC2C898BE80009CE57 /* ArticleCellView.swift */; };
+		1DF615EF2C898BFA0009CE57 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF615EE2C898BFA0009CE57 /* ArticleModel.swift */; };
+		1DF615F22C898C180009CE57 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF615F12C898C180009CE57 /* NetworkService.swift */; };
+		1DF615F42C898C2A0009CE57 /* ArticlesRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF615F32C898C2A0009CE57 /* ArticlesRequestResponse.swift */; };
+		1DF615F72C898C4C0009CE57 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1DF615F62C898C4C0009CE57 /* Alamofire */; };
+		1DF615F92C898C4C0009CE57 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1DF615F82C898C4C0009CE57 /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1DF615D92C898A670009CE57 /* NYTimesNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTimesNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF615DC2C898A670009CE57 /* NYTimesNewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesNewsApp.swift; sourceTree = "<group>"; };
-		1DF615DE2C898A670009CE57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1DF615DE2C898A670009CE57 /* ArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesView.swift; sourceTree = "<group>"; };
 		1DF615E02C898A690009CE57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DF615E32C898A690009CE57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1DF615EA2C898BD10009CE57 /* AtriclesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtriclesViewModel.swift; sourceTree = "<group>"; };
+		1DF615EC2C898BE80009CE57 /* ArticleCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellView.swift; sourceTree = "<group>"; };
+		1DF615EE2C898BFA0009CE57 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		1DF615F12C898C180009CE57 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		1DF615F32C898C2A0009CE57 /* ArticlesRequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesRequestResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF615F72C898C4C0009CE57 /* Alamofire in Frameworks */,
+				1DF615F92C898C4C0009CE57 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +66,11 @@
 			isa = PBXGroup;
 			children = (
 				1DF615DC2C898A670009CE57 /* NYTimesNewsApp.swift */,
-				1DF615DE2C898A670009CE57 /* ContentView.swift */,
+				1DF615F02C898BFF0009CE57 /* Services */,
+				1DF615DE2C898A670009CE57 /* ArticlesView.swift */,
+				1DF615EA2C898BD10009CE57 /* AtriclesViewModel.swift */,
+				1DF615EC2C898BE80009CE57 /* ArticleCellView.swift */,
+				1DF615EE2C898BFA0009CE57 /* ArticleModel.swift */,
 				1DF615E02C898A690009CE57 /* Assets.xcassets */,
 				1DF615E22C898A690009CE57 /* Preview Content */,
 			);
@@ -65,6 +83,15 @@
 				1DF615E32C898A690009CE57 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1DF615F02C898BFF0009CE57 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1DF615F12C898C180009CE57 /* NetworkService.swift */,
+				1DF615F32C898C2A0009CE57 /* ArticlesRequestResponse.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +110,10 @@
 			dependencies = (
 			);
 			name = NYTimesNews;
+			packageProductDependencies = (
+				1DF615F62C898C4C0009CE57 /* Alamofire */,
+				1DF615F82C898C4C0009CE57 /* AlamofireDynamic */,
+			);
 			productName = NYTimesNews;
 			productReference = 1DF615D92C898A670009CE57 /* NYTimesNews.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +142,9 @@
 				Base,
 			);
 			mainGroup = 1DF615D02C898A670009CE57;
+			packageReferences = (
+				1DF615F52C898C4C0009CE57 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1DF615DA2C898A670009CE57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF615DF2C898A670009CE57 /* ContentView.swift in Sources */,
+				1DF615EB2C898BD10009CE57 /* AtriclesViewModel.swift in Sources */,
+				1DF615EF2C898BFA0009CE57 /* ArticleModel.swift in Sources */,
+				1DF615DF2C898A670009CE57 /* ArticlesView.swift in Sources */,
 				1DF615DD2C898A670009CE57 /* NYTimesNewsApp.swift in Sources */,
+				1DF615F42C898C2A0009CE57 /* ArticlesRequestResponse.swift in Sources */,
+				1DF615F22C898C180009CE57 /* NetworkService.swift in Sources */,
+				1DF615ED2C898BE80009CE57 /* ArticleCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +317,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +327,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hello.NYTimesNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,8 +350,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +360,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = hello.NYTimesNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -344,6 +391,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1DF615F52C898C4C0009CE57 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DF615F62C898C4C0009CE57 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DF615F52C898C4C0009CE57 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1DF615F82C898C4C0009CE57 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DF615F52C898C4C0009CE57 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1DF615D12C898A670009CE57 /* Project object */;
 }

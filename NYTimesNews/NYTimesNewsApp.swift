@@ -1,17 +1,36 @@
-//
-//  NYTimesNewsApp.swift
-//  NYTimesNews
-//
-//  Created by Dmitriy Ryndya on 05.09.2024.
-//
-
 import SwiftUI
 
 @main
-struct NYTimesNewsApp: App {
+struct NewsApp: App {
+
+    @StateObject private var viewModel = ArticlesViewModel()
+
     var body: some Scene {
+
         WindowGroup {
-            ContentView()
+            TabView {
+                ArticlesView(articles: viewModel.mostEmailedArticles)
+                    .tabItem {
+                        Label("Most Emailed", systemImage: "envelope.arrow.triangle.branch.fill")
+                    }
+                    .onAppear {
+                        viewModel.loadArticles(for: .emailed)
+                    }
+                ArticlesView(articles: viewModel.mostSharedArticles)
+                    .tabItem {
+                        Label("Most Shared", systemImage: "square.and.arrow.up.fill")
+                    }
+                    .onAppear {
+                        viewModel.loadArticles(for: .shared)
+                    }
+                ArticlesView(articles: viewModel.mostViewedArticles)
+                    .tabItem {
+                        Label("Most Viewed", systemImage: "eye.fill")
+                    }
+                    .onAppear {
+                        viewModel.loadArticles(for: .viewed)
+                    }
+            }
         }
     }
 }
