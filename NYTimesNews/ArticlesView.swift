@@ -2,21 +2,22 @@ import SwiftUI
 
 struct ArticlesView: View {
 
-    var articles: [ArticleModel]
+    @ObservedObject var viewModel: ArticlesViewModel
+    var articleType: ArticlesViewModel.ArticleType
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(articles, id: \.id) { article in
-                    ArticleCellView(article: article)
-                }
+            List(viewModel.articles) { article in
+                ArticleCellView(article: article)
             }
             .navigationTitle("Articles")
+            .onAppear {
+                viewModel.loadArticles(for: articleType)
+            }
         }
-        Text("Hello")
     }
 }
 
 #Preview {
-    ArticlesView(articles: [ArticleModel(id: 1, title: "Hello", description: "Article")])
+    ArticlesView(viewModel: ArticlesViewModel(), articleType: .emailed)
 }

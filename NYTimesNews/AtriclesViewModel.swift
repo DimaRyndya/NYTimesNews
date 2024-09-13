@@ -3,9 +3,7 @@ import Combine
 
 final class ArticlesViewModel: ObservableObject {
 
-    @Published private(set) var mostEmailedArticles: [ArticleModel] = []
-    @Published private(set) var mostViewedArticles: [ArticleModel] = []
-    @Published private(set) var mostSharedArticles: [ArticleModel] = []
+    @Published private(set) var articles: [ArticleModel] = []
 
     private let networkService = NetworkService()
     private var cancellables = Set<AnyCancellable>()
@@ -37,15 +35,7 @@ final class ArticlesViewModel: ObservableObject {
                     break
                 }
             } receiveValue: { [weak self] (response: ArticlesRequestResponse) in
-                switch type {
-                case .emailed:
-                    self?.mostEmailedArticles = response.articles
-                case .viewed:
-                    self?.mostViewedArticles = response.articles
-                case .shared:
-                    self?.mostSharedArticles = response.articles
-                }
-
+                self?.articles = response.articles
             }
             .store(in: &cancellables)
     }

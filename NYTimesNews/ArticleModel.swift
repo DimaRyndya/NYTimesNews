@@ -1,6 +1,6 @@
 import Foundation
 
-struct ArticleModel: Decodable {
+struct ArticleModel: Decodable, Identifiable {
     let id: Int
     let title: String
     let description: String
