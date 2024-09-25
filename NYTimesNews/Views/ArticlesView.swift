@@ -7,7 +7,11 @@ struct ArticlesView: View {
     var body: some View {
         NavigationView {
             List(articles) { article in
-                ArticleCellView(article: article)
+                NavigationLink {
+                    ArticleDetailView()
+                } label: {
+                    ArticleCellView(article: article)
+                }
             }
             .navigationTitle("News")
         }

@@ -10,7 +10,13 @@ final class ArticlesViewModel: ObservableObject {
     private let networkService = NetworkService()
     private var cancellables = Set<AnyCancellable>()
 
-    func loadArticles(for type: ArticleType) {
+    var tabs: [SelectedTab] = [
+        .emailed(title: "Most Emailed", image: "envelope.arrow.triangle.branch.fill"),
+        .viewed(title: "Most Viewed", image: "square.and.arrow.up.fill"),
+        .shared(title: "Most Shared", image: "eye.fill")
+    ]
+
+    func loadArticles(for type: SelectedTab) {
         let apiKey = "i4T2FJirMgYdE6aDvr5oBugtyBtqJff0"
         let parameters = ["api-key" : apiKey]
         var url: String {
@@ -45,12 +51,23 @@ final class ArticlesViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
+
+    func getArticles(for selectedType: SelectedTab) -> [ArticleModel] {
+        switch selectedType {
+        case .emailed:
+            return emailedArticles
+        case .viewed:
+            return viewedArticles
+        case .shared:
+            return sharedArticles
+        }
+    }
 }
 
 extension ArticlesViewModel {
-    enum ArticleType {
-        case emailed
-        case viewed
-        case shared
+    enum SelectedTab: Hashable {
+        case emailed(title: String, image: String)
+        case viewed(title: String, image: String)
+        case shared(title: String, image: String)
     }
 }

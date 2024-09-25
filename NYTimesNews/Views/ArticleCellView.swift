@@ -5,7 +5,7 @@ struct ArticleCellView: View {
     let article: ArticleModel
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(article.title)
                 .font(.headline)
             Text(article.description)
