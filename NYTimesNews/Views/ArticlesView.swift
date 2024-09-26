@@ -8,7 +8,7 @@ struct ArticlesView: View {
         NavigationView {
             List(articles) { article in
                 NavigationLink {
-                    ArticleDetailView()
+                    ArticleDetailView(article: article)
                 } label: {
                     ArticleCellView(article: article)
                 }

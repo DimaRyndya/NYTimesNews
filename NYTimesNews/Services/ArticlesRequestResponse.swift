@@ -8,3 +8,16 @@ struct ArticlesRequestResponse: Decodable {
         case articles = "results"
     }
 }
+
+struct Media: Decodable {
+
+    let mediaMetadata: [MediaMetadata]
+
+    enum CodingKeys: String, CodingKey {
+        case mediaMetadata = "media-metadata"
+    }
+}
+
+struct MediaMetadata: Decodable {
+    let url: String
+}
