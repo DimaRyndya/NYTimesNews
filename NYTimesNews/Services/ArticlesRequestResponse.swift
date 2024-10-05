@@ -1,7 +1,6 @@
 import Foundation
 
 struct ArticlesRequestResponse: Decodable {
-
     let articles: [ArticleModel]
 
     enum CodingKeys: String, CodingKey {
@@ -10,7 +9,6 @@ struct ArticlesRequestResponse: Decodable {
 }
 
 struct Media: Decodable {
-
     let mediaMetadata: [MediaMetadata]
 
     enum CodingKeys: String, CodingKey {
